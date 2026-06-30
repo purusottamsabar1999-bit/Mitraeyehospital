@@ -1,0 +1,244 @@
+{
+  "appointments": [
+    {
+      "id": "MEH-70327",
+      "age": 26,
+      "email": "purusottamsabar1999@gmail.com",
+      "phone": "9178005136",
+      "gender": "Male",
+      "status": "Confirmed",
+      "message": "",
+      "doctorId": "doc-002",
+      "createdAt": "2026-06-30T08:31:55.687Z",
+      "serviceId": "srv-001",
+      "patientName": "Harry Potter",
+      "appointmentDate": "2026-06-30",
+      "appointmentTime": "17:00"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "doc-001",
+      "bio": "Dr. Soumya Mitra is a pioneer in advanced cataract surgery (Phacoemulsification) and specs removal (LASIK) in Southern Odisha. He has successfully performed over 10,000 laser eye procedures and phaco surgeries, bringing world-class ophthalmic care to Paralakhemundi.",
+      "name": "Dr. Soumya Mitra",
+      "photo": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop",
+      "isActive": true,
+      "specialty": "Cataract, Refractive (LASIK) & IOL Specialist",
+      "designation": "Medical Director & Chief Eye Surgeon",
+      "availableDays": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "qualification": "MBBS, MS (Ophthalmology)",
+      "experienceYears": 16,
+      "availableTimeEnd": "19:30",
+      "availableTimeStart": "08:30"
+    },
+    {
+      "id": "doc-002",
+      "bio": "Dr. Amit Mitra is deeply dedicated to pediatric eye health and early vision disorders. He specializes in childhood squint treatment, pediatric cataract, and advanced laser/surgical management for glaucoma patients of all age groups.",
+      "name": "Dr. Amit Mitra",
+      "photo": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=600&auto=format&fit=crop",
+      "isActive": true,
+      "specialty": "Pediatric Ophthalmology, Squint & Glaucoma Specialist",
+      "designation": "Senior Consultant & Eye Specialist",
+      "availableDays": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "qualification": "MBBS, DNB (Ophthalmology), Fellow in Pediatric Ophthalmology",
+      "experienceYears": 11,
+      "availableTimeEnd": "19:30",
+      "availableTimeStart": "08:30"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-001",
+      "image": "/src/assets/images/indian_eye_doctor_examination_1782808961021.jpg",
+      "title": "Comprehensive Eye Examination",
+      "isActive": true,
+      "iconClass": "Eye",
+      "sortOrder": 1,
+      "isFeatured": true,
+      "fullDescription": "Our comprehensive eye exam includes standard computerised vision testing, slit-lamp assessment, intraocular pressure checking for glaucoma, and detailed retinal evaluation. We recommend an annual checkup for everyone over 40 to monitor general eye health.",
+      "shortDescription": "Full diagnostic eye checkup using state-of-the-art computerised refraction and digital eye scanners."
+    },
+    {
+      "id": "srv-002",
+      "image": "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=600&auto=format&fit=crop",
+      "title": "Cataract Surgery (Phacoemulsification)",
+      "isActive": true,
+      "iconClass": "Sparkles",
+      "sortOrder": 2,
+      "isFeatured": true,
+      "fullDescription": "We perform advanced cold-phacoemulsification cataract surgery through a tiny, self-healing micro-incision. The clouded natural lens is dissolved and replaced with state-of-the-art Monofocal, Multifocal, or Toric Premium Foldable Lenses, allowing patients to resume normal activities within 24 hours.",
+      "shortDescription": "Micro-incision, sutureless, painless cataract surgery with premium intraocular lens (IOL) implantation."
+    },
+    {
+      "id": "srv-003",
+      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600&auto=format&fit=crop",
+      "title": "LASIK & Specs Removal Surgery",
+      "isActive": true,
+      "iconClass": "Zap",
+      "sortOrder": 3,
+      "isFeatured": true,
+      "fullDescription": "Regain natural crystal-clear vision with our highly precise LASIK laser procedures. By reshaping the cornea, we treat myopia (nearsightedness), hyperopia (farsightedness), and astigmatism safely and painlessly, with immediate visual recovery.",
+      "shortDescription": "Advanced laser vision correction to permanently eliminate dependency on spectacles and contact lenses."
+    },
+    {
+      "id": "srv-004",
+      "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=600&auto=format&fit=crop",
+      "title": "Glaucoma Early Detection & Care",
+      "isActive": true,
+      "iconClass": "HeartPulse",
+      "sortOrder": 4,
+      "isFeatured": true,
+      "fullDescription": "Glaucoma is often called the \"silent thief of sight.\" We offer advanced screening including Non-Contact Tonometry, Automated Perimetry (Visual Fields Study), and optical coherence tomography of the optic nerve to catch and treat glaucoma early before irreversible vision loss occurs.",
+      "shortDescription": "Digital tonometry, visual fields analysis, and specialized laser/surgical therapies to manage glaucoma."
+    },
+    {
+      "id": "srv-005",
+      "image": "/src/assets/images/retinal_treatment_india_1782809884470.jpg",
+      "title": "Retinal Disorders Treatment",
+      "isActive": true,
+      "iconClass": "Activity",
+      "sortOrder": 5,
+      "isFeatured": false,
+      "fullDescription": "Our retina clinic manages sight-threatening conditions caused by diabetes, hypertension, and aging. We provide digital Fundus Photography, Retinal Laser Photocoagulation, and Intravitreal injections to preserve vision in patients with diabetic retinopathy and AMD.",
+      "shortDescription": "Comprehensive management of Diabetic Retinopathy, Macular Degeneration, and retinal tears."
+    },
+    {
+      "id": "srv-006",
+      "image": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=600&auto=format&fit=crop",
+      "title": "Pediatric Eye Care & Squint Clinic",
+      "isActive": true,
+      "iconClass": "Smile",
+      "sortOrder": 6,
+      "isFeatured": false,
+      "fullDescription": "Children require specialized eye care as their vision systems are still developing. We diagnose and treat childhood refractive errors, lazy eyes, congenital cataracts, and provide modern non-surgical and surgical correction for squint and eye misalignment.",
+      "shortDescription": "Specialized eye checkups for children, management of lazy eye (amblyopia), and squint correction."
+    },
+    {
+      "id": "srv-007",
+      "image": "/src/assets/images/rural_eye_camp_india_1782810264396.jpg",
+      "title": "Community Eye Camps & Outreach",
+      "isActive": true,
+      "iconClass": "MapPin",
+      "sortOrder": 7,
+      "isFeatured": false,
+      "fullDescription": "As part of our social vision, Mitra Eye Hospital regularly conducts free eye checkup camps and distributes free medications in remote villages of Odisha. We also transport patients requiring cataract surgery to our base hospital for free or highly subsidized surgical procedures.",
+      "shortDescription": "Free eye diagnostic and surgical camps across rural Gajapati district to combat preventable blindness."
+    },
+    {
+      "id": "srv-008",
+      "image": "/src/assets/images/optical_dispensing_unit_1782810690453.jpg",
+      "title": "Optics & Prescription Glasses",
+      "isActive": true,
+      "iconClass": "Glasses",
+      "sortOrder": 8,
+      "isFeatured": false,
+      "fullDescription": "Get perfectly fitted specs directly at our hospital. We feature an advanced in-house optical shop with premium anti-reflective, blue-cut, and progressive lenses, paired with lightweight, highly durable frames to suit all budgets.",
+      "shortDescription": "State-of-the-art optical dispensing unit with premium single-vision, bifocal, and progressive lenses."
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-001",
+      "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
+      "title": "Mitra Eye Hospital Front Entrance",
+      "category": "hospital",
+      "createdAt": "2026-06-30T08:14:00.949Z"
+    },
+    {
+      "id": "gal-002",
+      "image": "/src/assets/images/diagnostic_suite_1782811060432.jpg",
+      "title": "Advanced Computerised Diagnosis Suite",
+      "category": "hospital",
+      "createdAt": "2026-06-30T08:14:00.949Z"
+    },
+    {
+      "id": "gal-003",
+      "image": "/src/assets/images/cataract_phaco_surgery_1782811419908.jpg",
+      "title": "Sutureless Cataract Phaco Surgery in Action",
+      "category": "surgery",
+      "createdAt": "2026-06-30T08:14:00.949Z"
+    },
+    {
+      "id": "gal-004",
+      "image": "/src/assets/images/rural_eye_camp_outreach_1782811956304.jpg",
+      "title": "Free Vision Screening Camp - Friends Colony Rural Outreach",
+      "category": "camps",
+      "createdAt": "2026-06-30T08:14:00.949Z"
+    },
+    {
+      "id": "gal-005",
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop",
+      "title": "Our Medical Team of Dedicated Specialists",
+      "category": "team",
+      "createdAt": "2026-06-30T08:14:00.949Z"
+    }
+  ],
+  "contact_messages": [],
+  "admin_users": [
+    {
+      "id": "adm-001",
+      "role": "superadmin",
+      "fullName": "Hospital Admin",
+      "username": "admin",
+      "lastLogin": "2026-06-30T12:24:27.437Z",
+      "passwordHash": "e86f78a8a3caf0b60d8e74e5942aa6d86dc150cd3c03338aef25b7d2d7e3acc7"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "tst-001",
+      "rating": 5,
+      "review": "Excellent service at Mitra Eye Hospital! My grandfather had painless cataract surgery here. He can see clearly now without any specs. Dr. Soumya Mitra is extremely polite and highly experienced. Best hospital in Paralakhemundi!",
+      "createdAt": "2026-06-30T08:14:00.949Z",
+      "isApproved": true,
+      "patientName": "Prashant Kumar Patra"
+    },
+    {
+      "id": "tst-002",
+      "rating": 5,
+      "review": "I visited for my daughter’s eye squint examination. Dr. Amit Mitra diagnosed it perfectly and prescribed visual exercises. Her eyes are showing great improvement. Very neat clinic, highly recommended for children.",
+      "createdAt": "2026-06-30T08:14:00.949Z",
+      "isApproved": true,
+      "patientName": "Meenakshi Sabar"
+    },
+    {
+      "id": "tst-003",
+      "rating": 4,
+      "review": "Very professional clinic. Best state-of-the-art instruments in Paralakhemundi. Staff is cooperative, and fees are affordable compared to big cities. Digital scanning was very thorough.",
+      "createdAt": "2026-06-30T08:14:00.949Z",
+      "isApproved": true,
+      "patientName": "Santosh Jena"
+    }
+  ],
+  "blocked_slots": [],
+  "settings": {
+    "email": "info@mitraeyehospital.com",
+    "phone": "+91 91780 05136",
+    "address": "Government Medical Main Road, Opposite Catholic Church, Near Swaraj Tractor Showroom, Friends Colony, Paralakhemundi, Odisha – 761200",
+    "tagline": "Caring for Your Vision, Enriching Your Life",
+    "coordinates": {
+      "lat": 18.7719411,
+      "lng": 84.0947889
+    },
+    "hospitalName": "Mitra Eye Hospital",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.082987515286!2d84.0947889!3d18.7719411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3cf7e6f4c60abd%3A0x3f9b9001acedefe3!2sMITRA%20EYE%20HOSPITAL-%20PARALAKHEMUNDI!5e0!3m2!1sen!2sin!4v1719660000000!5m2!1sen!2sin",
+    "timingsSunday": "Sun: 8:30 AM – 12:30 PM",
+    "whatsAppNumber": "+91 91780 05136",
+    "timingsWeekdays": "Mon–Sat: 8:30 AM – 7:30 PM"
+  }
+}

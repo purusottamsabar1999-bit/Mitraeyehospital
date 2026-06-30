@@ -1,0 +1,6 @@
+{
+  "name": "Mitra Eye Hospital",
+  "description": "Professional website for Mitra Eye Hospital in Paralakhemundi, Odisha featuring dynamic appointment booking and a comprehensive admin management dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
