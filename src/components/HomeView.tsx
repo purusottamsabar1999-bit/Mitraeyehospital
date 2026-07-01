@@ -130,7 +130,7 @@ export default function HomeView({ setCurrentTab, settings, services, doctors, t
           <div className="lg:col-span-5 relative flex justify-center">
             <div className="relative w-full max-w-[420px] aspect-square rounded-2xl overflow-hidden shadow-2xl border border-slate-800/80 group">
               <img
-                src="/src/assets/images/eye_examination_clinic_1782804435411.jpg"
+                src="https://lh3.googleusercontent.com/d/15DhBQitbJICQIHGx1Z47nFI4WHluy-5A"
                 alt="Eye Examination Clinic"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"
