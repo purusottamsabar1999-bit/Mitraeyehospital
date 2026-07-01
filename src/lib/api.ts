@@ -13,6 +13,7 @@ import {
   Appointment,
   AppointmentStatus
 } from '../types';
+import fallbackDb from '../../database.json';
 
 const API_BASE = '/api';
 
@@ -25,26 +26,50 @@ function getAuthHeader() {
 export const api = {
   // Public Settings
   getSettings: async (): Promise<HospitalSettings> => {
-    const res = await fetch(`${API_BASE}/settings`);
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/settings`);
+      if (!res.ok) throw new Error(`HTTP status ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      console.warn('API getSettings failed, using local fallback:', err);
+      return fallbackDb.settings as HospitalSettings;
+    }
   },
 
   // Public Services
   getServices: async (): Promise<Service[]> => {
-    const res = await fetch(`${API_BASE}/services`);
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/services`);
+      if (!res.ok) throw new Error(`HTTP status ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      console.warn('API getServices failed, using local fallback:', err);
+      return fallbackDb.services as Service[];
+    }
   },
 
   // Public Doctors
   getDoctors: async (): Promise<Doctor[]> => {
-    const res = await fetch(`${API_BASE}/doctors`);
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/doctors`);
+      if (!res.ok) throw new Error(`HTTP status ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      console.warn('API getDoctors failed, using local fallback:', err);
+      return fallbackDb.doctors as Doctor[];
+    }
   },
 
   // Public Gallery
   getGallery: async (): Promise<GalleryItem[]> => {
-    const res = await fetch(`${API_BASE}/gallery`);
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/gallery`);
+      if (!res.ok) throw new Error(`HTTP status ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      console.warn('API getGallery failed, using local fallback:', err);
+      return fallbackDb.gallery as GalleryItem[];
+    }
   },
 
   // Submit Contact Form
@@ -87,8 +112,15 @@ export const api = {
 
   // Get Approved Testimonials
   getApprovedTestimonials: async (): Promise<Testimonial[]> => {
-    const res = await fetch(`${API_BASE}/testimonials`);
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/testimonials`);
+      if (!res.ok) throw new Error(`HTTP status ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      console.warn('API getApprovedTestimonials failed, using local fallback:', err);
+      // Filter only approved ones from local database
+      return (fallbackDb.testimonials as Testimonial[]).filter(t => t.isApproved);
+    }
   },
 
   // Check Slot Availability
