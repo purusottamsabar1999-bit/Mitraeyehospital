@@ -188,14 +188,25 @@
       "createdAt": "2026-06-30T08:14:00.949Z"
     }
   ],
-  "contact_messages": [],
+  "contact_messages": [
+    {
+      "id": "msg-6976",
+      "name": "Purusottam Sabar",
+      "email": "purusottamsabar1999@gmail.com",
+      "phone": "8895202956",
+      "isRead": true,
+      "message": "My eyes are burning and looking red.",
+      "subject": "For an Appointment",
+      "createdAt": "2026-06-30T13:34:22.995Z"
+    }
+  ],
   "admin_users": [
     {
       "id": "adm-001",
       "role": "superadmin",
       "fullName": "Hospital Admin",
       "username": "admin",
-      "lastLogin": "2026-06-30T12:24:27.437Z",
+      "lastLogin": "2026-07-01T06:54:49.511Z",
       "passwordHash": "e86f78a8a3caf0b60d8e74e5942aa6d86dc150cd3c03338aef25b7d2d7e3acc7"
     }
   ],
@@ -227,7 +238,7 @@
   ],
   "blocked_slots": [],
   "settings": {
-    "email": "info@mitraeyehospital.com",
+    "email": "purusottamsabar1999@gmail.com",
     "phone": "+91 91780 05136",
     "address": "Government Medical Main Road, Opposite Catholic Church, Near Swaraj Tractor Showroom, Friends Colony, Paralakhemundi, Odisha – 761200",
     "tagline": "Caring for Your Vision, Enriching Your Life",

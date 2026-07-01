@@ -80,6 +80,37 @@ app.get('/api/gallery', (req, res) => {
   res.json(getGallery());
 });
 
+// Helper to forward submissions to Formspree
+async function forwardToFormspree(formType: string, data: any) {
+  try {
+    const fetchFn = (globalThis as any).fetch || (typeof fetch !== 'undefined' ? fetch : null);
+    if (!fetchFn) {
+      console.warn('Fetch is not available in this environment; skipping Formspree forwarding.');
+      return;
+    }
+    const response = await fetchFn('https://formspree.io/f/xzdljzyy', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        _subject: `Mitra Eye Hospital - New ${formType} Submission`,
+        formType: formType,
+        ...data,
+        submittedAt: new Date().toISOString()
+      })
+    });
+    if (!response.ok) {
+      console.error(`Formspree error for ${formType}: Received status ${response.status}`);
+    } else {
+      console.log(`Successfully forwarded ${formType} submission to Formspree.`);
+    }
+  } catch (err) {
+    console.error(`Failed to forward ${formType} submission to Formspree:`, err);
+  }
+}
+
 // Submit Contact Message
 app.post('/api/contact', (req, res) => {
   const { name, phone, email, subject, message } = req.body;
@@ -87,6 +118,16 @@ app.post('/api/contact', (req, res) => {
     return res.status(400).json({ error: 'Name, phone, subject, and message are required.' });
   }
   const newMsg = saveContactMessage({ name, phone, email, subject, message });
+  
+  // Forward to Formspree asynchronously
+  forwardToFormspree('Contact Inquiry', {
+    name,
+    phone,
+    email: email || 'Not provided',
+    subject,
+    message
+  });
+
   res.json({ success: true, message: newMsg });
 });
 
@@ -187,6 +228,24 @@ app.post('/api/appointments/book', (req, res) => {
     appointmentDate,
     appointmentTime,
     message
+  });
+
+  // Resolve doctor and service names for a richer Formspree notification email
+  const doc = getDoctors().find(d => d.id === doctorId);
+  const srv = getServices().find(s => s.id === serviceId);
+
+  // Forward to Formspree asynchronously
+  forwardToFormspree('Appointment Booking', {
+    patientName,
+    phone,
+    email: email || 'Not provided',
+    age: age || 'Not provided',
+    gender: gender || 'Not provided',
+    serviceName: srv ? srv.title : serviceId,
+    doctorName: doc ? doc.name : doctorId,
+    appointmentDate,
+    appointmentTime,
+    message: message || 'None'
   });
 
   res.json({ success: true, appointment: appt });

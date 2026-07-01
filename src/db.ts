@@ -347,7 +347,7 @@ export function getDb(): Database {
       timingsWeekdays: 'Mon–Sat: 8:30 AM – 7:30 PM',
       timingsSunday: 'Sun: 8:30 AM – 12:30 PM',
       phone: '+91 91780 05136',
-      email: 'info@mitraeyehospital.com',
+      email: 'purusottamsabar1999@gmail.com',
       whatsAppNumber: '+91 91780 05136'
     }
   };

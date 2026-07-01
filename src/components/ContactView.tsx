@@ -20,7 +20,7 @@ export default function ContactView({ settings }: ContactViewProps) {
   const [statusMsg, setStatusMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   const formattedPhone = settings?.phone || '+91 9178005136';
-  const formattedEmail = settings?.email || 'info@mitraeyehospital.com';
+  const formattedEmail = settings?.email || 'purusottamsabar1999@gmail.com';
   const formattedAddress = settings?.address || 'Government Medical Main Road, Paralakhemundi, Odisha – 761200';
   const formattedTimingsWeekdays = settings?.timingsWeekdays || 'Mon–Sat: 8:30 AM – 7:30 PM';
   const formattedTimingsSunday = settings?.timingsSunday || 'Sun: 8:30 AM – 12:30 PM';
